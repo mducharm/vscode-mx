@@ -1,5 +1,7 @@
 {
 	"name": "mx",
+	"publisher": "mducharm",
+	"repository": {},
 	"displayName": "mx",
 	"description": "A collection of miscellaneous commands - like M-x in Emacs, but for VS Code.",
 	"version": "0.0.1",
@@ -11,7 +13,8 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld",
-		"onCommand:extension.makeJSClass"
+		"onCommand:extension.makeJSClass",
+		"onCommand:extension.reloadMx"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -23,6 +26,10 @@
 			{
 				"command": "extension.makeJSClass",
 				"title": "Make JS Class"
+			},
+			{
+				"command": "extension.reloadMx",
+				"title": "Reload Mx"
 			}
 		]
 	},
