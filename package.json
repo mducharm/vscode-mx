@@ -1,7 +1,7 @@
 {
 	"name": "mx",
 	"displayName": "mx",
-	"description": "Like M-x in Emacs, but for VS Code - it's a collection of miscellaneous commands.",
+	"description": "A collection of miscellaneous commands - like M-x in Emacs, but for VS Code.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
