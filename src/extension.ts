@@ -13,6 +13,15 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		},
 		{
+			name: 'extension.reloadMx',
+			command: () => {
+				// todo run vsce package
+				// todo run code --install-extension mx-0.0.1.vsix
+				vscode.window.showInformationMessage('Reloaded');
+				vscode.commands.executeCommand('workbench.action.reloadWindow');
+			}
+		},
+		{
 			name: 'extension.makeJSClass',
 			command: () => {
 				const activeEditor = vscode.window.activeTextEditor;
