@@ -13,6 +13,8 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld",
+		"onCommand:extension.nodeRun",
+		"onCommand:extension.dotnetRun",
 		"onCommand:extension.makeJSClass",
 		"onCommand:extension.reloadMx"
 	],
@@ -22,6 +24,14 @@
 			{
 				"command": "extension.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "extension.nodeRun",
+				"title": "Run File with Node"
+			},
+			{
+				"command": "extension.dotnetRun",
+				"title": "dotnet run"
 			},
 			{
 				"command": "extension.makeJSClass",

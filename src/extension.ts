@@ -13,6 +13,14 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		},
 		{
+			name: 'extension.nodeRun',
+			command: () => vscode.commands.executeCommand("workbench.action.terminal.sendSequence", { text: "node ${file}\x0d" })
+		},
+		{
+			name: 'extension.dotnetRun',
+			command: () => vscode.commands.executeCommand("workbench.action.terminal.sendSequence", { text: "dotnet run\x0d" })
+		},
+		{
 			name: 'extension.reloadMx',
 			command: () => {
 				// todo run vsce package
@@ -40,11 +48,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 					let propDeclarations = props.map(p => {
 						return `\t${p};\n`;
-					})
+					});
 
 					let propAssignments = props.map(p => {
 						return `\tthis.${p} = ${p};\n`;
-					})
+					});
 
 					let classText = [
 						`class ${className}` + " {\n",
@@ -54,11 +62,11 @@ export function activate(context: vscode.ExtensionContext) {
 						...propAssignments,
 						"\t}\n",
 						"}"
-					].reduce((a, v) => a + v)
+					].reduce((a, v) => a + v);
 
 					activeEditor.edit((editBuilder) => {
 						editBuilder.replace(currentLine.range, classText);
-					})
+					});
 
 				}
 			}
