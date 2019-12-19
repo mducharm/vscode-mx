@@ -20,6 +20,18 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "extension.makeJSClass",
+					"when": "editorLangId == typescript || editorLangId == javascript"
+				},
+				{
+					"command": "extension.nodeRun",
+					"when": "editorLangId == javascript"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "extension.helloWorld",
@@ -35,7 +47,8 @@
 			},
 			{
 				"command": "extension.makeJSClass",
-				"title": "Make JS Class"
+				"title": "Make JS Class",
+				"when": "editorLangId == typescript || editorLangId == javascript"
 			},
 			{
 				"command": "extension.reloadMx",
